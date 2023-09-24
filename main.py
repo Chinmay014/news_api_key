@@ -1,13 +1,13 @@
 import requests
 from send_email import send_email
-
+import os
 
 # url = "https://finance.yahoo.com"
 
-api_key = "2f0d54b1bf49455690c360d08388fecb"
+api_key = os.getenv("NEWS_API_KEY")
 url = "https://newsapi.org/v2/everything?"\
     "q=tesla&sortBy=publishedAt&apiKey"\
-        "=2f0d54b1bf49455690c360d08388fecb"
+        "="+api_key
 
 
 
